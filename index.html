@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -65,7 +72,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Microsoft Yahei:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -78,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="it 技术 博客" />
 
 
 
@@ -87,23 +94,23 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/icon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="专注技术研究与交流">
+<meta name="description" content="精诚所至,金石为开">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Anblandy | 个人博客">
+<meta property="og:title" content="Anblandy">
 <meta property="og:url" content="https://anblandy.github.io/index.html">
-<meta property="og:site_name" content="Anblandy | 个人博客">
-<meta property="og:description" content="专注技术研究与交流">
+<meta property="og:site_name" content="Anblandy">
+<meta property="og:description" content="精诚所至,金石为开">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anblandy | 个人博客">
-<meta name="twitter:description" content="专注技术研究与交流">
+<meta name="twitter:title" content="Anblandy">
+<meta name="twitter:description" content="精诚所至,金石为开">
 
 
 
@@ -138,7 +145,7 @@
 
 
 
-  <title>Anblandy | 个人博客</title>
+  <title>Anblandy - 个人博客,专注技术</title>
   
 
 
@@ -176,12 +183,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Anblandy | 个人博客</span>
+        <span class="site-title">Anblandy</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">努力拼搏</p>
+        <h1 class="site-subtitle" itemprop="description">个人博客,专注技术</h1>
       
   </div>
 
@@ -282,7 +289,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -290,9 +297,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/Less预处理/" itemprop="url">LESS总结</a></h1>
+                <a class="post-title-link" href="/2017/09/17/Less预处理/" itemprop="url">LESS总结</a></h2>
         
 
         <div class="post-meta">
@@ -314,6 +321,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/less教程/" itemprop="url" rel="index">
+                    <span itemprop="name">less教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -343,46 +372,14 @@
 
       
         
-          
-            <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><p>是css预处理语言</p>
-<ol>
-<li>变量</li>
-<li>嵌套</li>
-<li>封装</li>
-<li>传参</li>
-</ol>
-<ol>
-<li>less文件新建时需要<em>.less</em>后缀名</li>
-</ol>
-<p>注释: //…(不会被编译),或者/<em> … </em>/(生成的css带这个注释)</p>
-<p><strong>变量</strong>:</p>
-<p>必须以@开头</p>
-<p>使用变量时也需要带上@</p>
-<p>例如: @color: red;</p>
-<p><strong>嵌套</strong>: </p>
-<p>嵌套可以在大括号里接着写子元素,一层层嵌套</p>
-<p>伪元素嵌套时前面带<em>&amp;</em></p>
-<p><strong>封装</strong></p>
-<p>混入语法mixin</p>
-<p>可以传递参数(变量格式),设置默认值</p>
-<p>ex:</p>
-<pre><code>.fl(){
-    float: left;
-}
-//200px是默认数值
-.left(@num : 200px){
-    left:@num;
-}
-.box{
-    .fl();
-    .left(300px);
-}
-</code></pre><p><strong>引入</strong></p>
-<p>当前文件引入其他less,css文件</p>
-<pre><code>@import url(URL路径);
-</code></pre><p>建议将所有文件引入,写在最前面</p>
-
-          
+          这篇文章对于less语法进行了总结
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/17/Less预处理/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -438,7 +435,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -446,9 +443,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/HTML5-day06/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day06/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -652,7 +649,7 @@ timeout : 5000;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -660,9 +657,9 @@ timeout : 5000;
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/HTML5-day05/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day05/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -804,7 +801,7 @@ flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -812,9 +809,9 @@ flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/HTML5-day04/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day04/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -948,7 +945,7 @@ flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -956,9 +953,9 @@ flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/HTML5-day03/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day03/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1127,7 +1124,7 @@ transform: skew(10deg,10deg);
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -1135,9 +1132,9 @@ transform: skew(10deg,10deg);
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/HTML5-day02/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day02/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1357,7 +1354,7 @@ transform: skew(10deg,10deg);
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -1365,9 +1362,9 @@ transform: skew(10deg,10deg);
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/AJAX-day02/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/09/17/AJAX-day02/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1510,7 +1507,7 @@ transform: skew(10deg,10deg);
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -1518,9 +1515,9 @@ transform: skew(10deg,10deg);
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/AJAX-day01/" itemprop="url">ajax-01</a></h1>
+                <a class="post-title-link" href="/2017/09/17/AJAX-day01/" itemprop="url">ajax-01</a></h2>
         
 
         <div class="post-meta">
@@ -1670,7 +1667,7 @@ count($arr) 计算数组长度的方法
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -1678,9 +1675,9 @@ count($arr) 计算数组长度的方法
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/17/hello-world/" itemprop="url">Hello World</a></h2>
         
 
         <div class="post-meta">
@@ -1814,8 +1811,8 @@ count($arr) 计算数组长度的方法
                alt="Anblandy" />
           <p class="site-author-name" itemprop="name">Anblandy</p>
            
-              <p class="site-description motion-element" itemprop="description">专注技术研究与交流</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -1829,7 +1826,25 @@ count($arr) 计算数组长度的方法
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -2018,6 +2033,9 @@ count($arr) 计算数组长度的方法
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
 
   
 

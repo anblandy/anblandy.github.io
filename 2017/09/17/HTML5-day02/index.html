@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -65,7 +72,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Microsoft Yahei:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -78,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="it 技术 博客" />
 
 
 
@@ -87,7 +94,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/icon.ico?v=5.1.2" />
 
 
 
@@ -96,14 +103,14 @@
 
 <meta name="description" content="HTML5第二天·CSS3 CSS3兼容性差,需要添加浏览器私有前缀 移动端用的多,浏览器版本高 在不断改进中 应用相对广泛  如何对待CSS3 坚持渐进增强原则(another.优雅降级)  ##选择器##  基本选择器(C2) 关系选择器(C2) 属性选择器[用在表单元素中居多],[有兼容性问题] 伪类选择器 :nth-child( num ) ( 起始为 1 ,参数为”odd”时选择奇数,参">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Anblandy | 个人博客">
+<meta property="og:title" content="Anblandy">
 <meta property="og:url" content="https://anblandy.github.io/2017/09/17/HTML5-day02/index.html">
-<meta property="og:site_name" content="Anblandy | 个人博客">
+<meta property="og:site_name" content="Anblandy">
 <meta property="og:description" content="HTML5第二天·CSS3 CSS3兼容性差,需要添加浏览器私有前缀 移动端用的多,浏览器版本高 在不断改进中 应用相对广泛  如何对待CSS3 坚持渐进增强原则(another.优雅降级)  ##选择器##  基本选择器(C2) 关系选择器(C2) 属性选择器[用在表单元素中居多],[有兼容性问题] 伪类选择器 :nth-child( num ) ( 起始为 1 ,参数为”odd”时选择奇数,参">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-17T16:53:34.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anblandy | 个人博客">
+<meta name="twitter:title" content="Anblandy">
 <meta name="twitter:description" content="HTML5第二天·CSS3 CSS3兼容性差,需要添加浏览器私有前缀 移动端用的多,浏览器版本高 在不断改进中 应用相对广泛  如何对待CSS3 坚持渐进增强原则(another.优雅降级)  ##选择器##  基本选择器(C2) 关系选择器(C2) 属性选择器[用在表单元素中居多],[有兼容性问题] 伪类选择器 :nth-child( num ) ( 起始为 1 ,参数为”odd”时选择奇数,参">
 
 
@@ -139,7 +146,7 @@
 
 
 
-  <title> | Anblandy | 个人博客</title>
+  <title> | Anblandy</title>
   
 
 
@@ -175,12 +182,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Anblandy | 个人博客</span>
+        <span class="site-title">Anblandy</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">努力拼搏</p>
+        <h1 class="site-subtitle" itemprop="description">个人博客,专注技术</h1>
       
   </div>
 
@@ -281,7 +288,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
+      <meta itemprop="name" content="Anblandy">
     </span>
 
     
@@ -289,7 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h2 class="post-title" itemprop="name headline"></h2>
         
 
         <div class="post-meta">
@@ -555,8 +562,8 @@
                alt="Anblandy" />
           <p class="site-author-name" itemprop="name">Anblandy</p>
            
-              <p class="site-description motion-element" itemprop="description">专注技术研究与交流</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -570,7 +577,25 @@
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -775,6 +800,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
 
   
 
