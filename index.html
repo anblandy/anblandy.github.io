@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 - 副本 (6) - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/Less预处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -292,7 +292,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 - 副本 (6) - 副本/" itemprop="url">Hello World2</a></h1>
+                <a class="post-title-link" href="/2017/09/17/Less预处理/" itemprop="url">LESS总结</a></h1>
         
 
         <div class="post-meta">
@@ -304,7 +304,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -344,15 +344,43 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><p>是css预处理语言</p>
+<ol>
+<li>变量</li>
+<li>嵌套</li>
+<li>封装</li>
+<li>传参</li>
+</ol>
+<ol>
+<li>less文件新建时需要<em>.less</em>后缀名</li>
+</ol>
+<p>注释: //…(不会被编译),或者/<em> … </em>/(生成的css带这个注释)</p>
+<p><strong>变量</strong>:</p>
+<p>必须以@开头</p>
+<p>使用变量时也需要带上@</p>
+<p>例如: @color: red;</p>
+<p><strong>嵌套</strong>: </p>
+<p>嵌套可以在大括号里接着写子元素,一层层嵌套</p>
+<p>伪元素嵌套时前面带<em>&amp;</em></p>
+<p><strong>封装</strong></p>
+<p>混入语法mixin</p>
+<p>可以传递参数(变量格式),设置默认值</p>
+<p>ex:</p>
+<pre><code>.fl(){
+    float: left;
+}
+//200px是默认数值
+.left(@num : 200px){
+    left:@num;
+}
+.box{
+    .fl();
+    .left(300px);
+}
+</code></pre><p><strong>引入</strong></p>
+<p>当前文件引入其他less,css文件</p>
+<pre><code>@import url(URL路径);
+</code></pre><p>建议将所有文件引入,写在最前面</p>
 
           
         
@@ -401,7 +429,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 - 副本 (2) - 副本 - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/HTML5-day06/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -420,7 +448,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 - 副本 (2) - 副本 - 副本/" itemprop="url">Hello World2</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day06/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -432,7 +460,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -472,15 +500,101 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="HTML5-day06"><a href="#HTML5-day06" class="headerlink" title="HTML5-day06"></a>HTML5-day06</h1><h2 id="检测网络状态"><a href="#检测网络状态" class="headerlink" title="检测网络状态"></a>检测网络状态</h2><p><em>window.navigator.onLine</em></p>
+<p>检测网络状态,返回布尔值</p>
+<p>检测得是本地连接,不是真实的网络流量</p>
+<p>监听 <em>online offline</em> 事件来监听网络状态</p>
+<p>网络状态从无网–&gt;有网时触发online事件</p>
+<p>有网–&gt;无网时触发offline事件</p>
+<p>##web存储##<br>传统方式 : document.cookie</p>
+<p>本地存储的意义,</p>
+<p>将数据存储在用户本地电脑上,减轻服务器压力,提高用户体验</p>
+<h3 id="本地存储API"><a href="#本地存储API" class="headerlink" title="本地存储API"></a>本地存储API</h3><h4 id="存储到本地"><a href="#存储到本地" class="headerlink" title="存储到本地"></a>存储到本地</h4><pre><code>window.sessionStorage.setItem( );
+window.localStorage.setItem( );
+</code></pre><p>参数是 { key , value } 形式</p>
+<p>多次存储,如果key名字一样,后面存储的会覆盖之前设置的值 </p>
+<h4 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h4><pre><code>window.sessionStorage.getItem( )
+window.localStorage.getItem( );
+</code></pre><p>参数是key</p>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><pre><code>window.sessionStorage.removeItem( )
+window.localStorage.removeItem( );
+</code></pre><p>参数是key</p>
+<h4 id="清除所有数据"><a href="#清除所有数据" class="headerlink" title="清除所有数据"></a>清除所有数据</h4><pre><code>window.sessionStorage.clear( )
+window.localStorage.clear( );
+</code></pre><h4 id="通过索引获取键的名字"><a href="#通过索引获取键的名字" class="headerlink" title="通过索引获取键的名字"></a>通过索引获取键的名字</h4><pre><code>window.sessionStorage.key*(0)
+window.localStorage.key(0);
+</code></pre><h4 id="获取数据长度"><a href="#获取数据长度" class="headerlink" title="获取数据长度"></a>获取数据长度</h4><pre><code>window.sessionStorage.length;
+window.localStorage.length;
+</code></pre><h2 id="sessionStorage-localStorage-区别"><a href="#sessionStorage-localStorage-区别" class="headerlink" title="sessionStorage , localStorage 区别"></a>sessionStorage , localStorage 区别</h2><p><strong>localStorage</strong></p>
+<p>永久存储于本地电脑磁盘中,关闭浏览器、电脑、断电,数据都在</p>
+<p>可存储大小为20Mb</p>
+<p>可以多窗口数据共享 ( 但是遵守<em>同源策略</em> )</p>
+<p><strong>sessionStorage</strong></p>
+<p>临时存储,当页面关闭的时候,session数据会被自动清空</p>
+<p>可存储大小为5Mb</p>
+<p>不能多窗口数据共享 ( <em>通过跳转可以</em> )</p>
+<p>页面跳转可以通过session实现数据共享</p>
+<h2 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h2><p>创建读取文件对象</p>
+<pre><code>var file = DOMObj.files[0];
+var fr = new FileReader();
+fr.readAsDataURL(file);//用文件读取对象解析文件
+//当fr将file文件解析完毕时执行
+fr.addEventListener(&apos;load&apos;,function(){
+    //解析完成的结果
+    var result = fr.result;//fr.result中存储的是解析的结果
+}//一般异步都有事件或者回调函数可用,供功能完成时执行
+</code></pre><h2 id="拖拽API"><a href="#拖拽API" class="headerlink" title="拖拽API"></a>拖拽API</h2><p>元素设置 draggable = “ true “ 即可被拖拽,成为拖拽元素</p>
+<p>事件</p>
+<p><em>ondragstart</em> 开始拖拽时的事件</p>
+<p><em>ondragend</em> 结束拖拽时的事件</p>
+<p><em>ondrag</em> 拖拽时持续触发的事件</p>
+<p><strong>目标元素上的事件,目标元素是事件源 :</strong></p>
+<p><em>ondragenter</em> 拖拽元素进入目标元素触发</p>
+<p><em>ondragleave</em> 拖拽元素离开目标元素触发</p>
+<p><em>ondragover</em> [拖拽悬上]拖拽元素在目标元素内时一直触发</p>
+<p><em>ondrop</em> 在拖拽元素到目标身上松开鼠标时触发,这个事件默认情况下不会触发,浏览器默认阻止此事件(图片文字超链接默认开启),在<em>dragover</em>时阻止默认行为可以开启这个事件[event.preventDefault();  ]</p>
+<h2 id="案例-拖拽文件到div中"><a href="#案例-拖拽文件到div中" class="headerlink" title="案例:拖拽文件到div中"></a>案例:拖拽文件到div中</h2><p>拖拽外部元素进行图片解析,并在目标元素上预览出来</p>
+<ol>
+<li><p>怎么阻止浏览器默认的新页面打开图片</p>
+<p> document在drop的时候阻止掉默认事件</p>
+<pre><code>document.drop=function(e){
+    e.preventDefault();
+</code></pre><p>  }</p>
+<pre><code>document.dragover=function(e){
+    e.preventDefault();
+}
+</code></pre></li>
+<li><p>怎么获取外部拖进来的文件</p>
+<pre><code>target.ondrop=function(e){
+    //获取图片文件
+    var files = e.dataTransfer.files[0];
+    var fr= new FileReader();
+    fr.readAsDateURL(files);
+    fr.onload = function(){
+        var result = fr.result;
+        var img = document.creatElement(&quot;img&quot;);
+        img.src = result;
+        target.innerHTML = &quot;&quot;;
+        target.appenChild(img);
+    }
+}
+</code></pre><h1 id="地理位置API"><a href="#地理位置API" class="headerlink" title="地理位置API"></a>地理位置API</h1><p><em>LBS</em> (Location Based Sever) 基于位置服务</p>
+<p> navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options)</p>
+</li>
+</ol>
+<p>在成功的回调函数里接受一个position对象,这个对象里获取的是当前用户的是地理位置信息(经度和纬度)</p>
+<p>在错误的回调函数里接受一个error对象,这个对象里面存储的是错误的信息</p>
+<p>超时设置,单位ms</p>
+<pre><code>// 例如 :
+timeout : 5000;
+</code></pre><h2 id="播放器案例"><a href="#播放器案例" class="headerlink" title="播放器案例"></a>播放器案例</h2><p>实现元素全屏显示</p>
+<p>DOMObj.requestFullScreen();</p>
+<p>DOMObj.webkitRequestFullScreen();</p>
+<p>video的事件</p>
+<p>timeupdate事件 </p>
+<p>Media.duration 媒体时长</p>
+<p>.onchang事件 表单的值发生改变的时候触发的事件<br>.oninput事件 表单在输入的时候触发</p>
+<p>media.volume 媒体音量</p>
 
           
         
@@ -529,7 +643,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 - 副本 - 副本 - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/HTML5-day05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -548,7 +662,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 - 副本 - 副本 - 副本/" itemprop="url">Hello World2</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day05/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -560,7 +674,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -600,15 +714,39 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="H5-day05"><a href="#H5-day05" class="headerlink" title="H5-day05"></a>H5-day05</h1><h2 id="CSS动画库"><a href="#CSS动画库" class="headerlink" title="CSS动画库"></a>CSS动画库</h2><p><a href="http://animate.css" title="CSS动画库" target="_blank" rel="external">http://animate.css</a></p>
+<h2 id="伸缩布局-flex"><a href="#伸缩布局-flex" class="headerlink" title="伸缩布局 flex"></a>伸缩布局 flex</h2><p>给容器添加CSS属性</p>
+<p>弹性布局的前提</p>
+<pre><code>display: flex;
+</code></pre><p>改变主轴方向</p>
+<p>项目默认水平排列</p>
+<pre><code>flex-direction: row(主轴水平,左--&gt;右) | row-reverse (主轴水平方向翻转右--&gt;左) | column(主轴垂直 上--&gt;下) | column-reverse (主轴垂直反转 下--&gt;上)
+</code></pre><p>控制元素在主轴的对齐方式</p>
+<pre><code>justify-content : flex-start(以起点对齐) | flex-end(以终点对齐) | center(居中对齐) | space-between(两端对齐) | space-around(环绕对齐)
+</code></pre><p>对齐永远是整体对齐,不会颠倒项目次序,而flex-dircetion会改变项目次序</p>
+<pre><code>/*flex-wrap : 控制项目是否换行*/
+flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行(换行时向上换))
+
+/*flex-flow : flex-diection和flex-wrap的简写*/
+</code></pre><p><strong>align-item</strong></p>
+<p> 侧轴(交叉轴)单行情况下的对齐方式</p>
+<pre><code>align-item : flex-start (起点对齐) | flex-end (终点对齐) | center (居中对齐) | stretch (默认值,没有高度时自动将项目高度和容器高度设置为一致)
+</code></pre><p><strong>align-content</strong> </p>
+<p>定义多行轴线的对齐方式,如果轴线只有一行,那么这个属性不起作用</p>
+<pre><code>align-content : flex-start | flex-end | center(居中对齐) | space-between(两端对齐) | space-around(环绕对齐) | stretch(拉伸)
+</code></pre><h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><pre><code>/* order 项目之间的排序 默认为0 */
+/*越小越靠前*/
+
+/* flex-grow 定义项目之间的放大比例,默认为0,即使存在剩余空间也不放大*/
+
+/* flex-shrink 定义项目的缩小比例 原理和flex-grow是一样的, 默认值为 1 ,一个项目值为0时,他不会缩小*/
+
+/* flex-basis 宽度,比默认宽度属性权重高,默认值为auto */
+
+/* flex  是flex-grow,flex-shrink,flex-basis的简写 */
+
+/* align-self 给某个项目单独定义属性*/
+</code></pre><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>“transitionend”过渡结束触发的事件</p>
 
           
         
@@ -657,7 +795,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (6)/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/HTML5-day04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -676,7 +814,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (6)/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day04/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -688,7 +826,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -728,15 +866,31 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="HTML-day04"><a href="#HTML-day04" class="headerlink" title="HTML-day04"></a>HTML-day04</h1><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>伪类的CSS中写content:attr(属性名)可以获取父元素的属性值</p>
+<h2 id="Y方向旋转-rotateY"><a href="#Y方向旋转-rotateY" class="headerlink" title="Y方向旋转 rotateY"></a>Y方向旋转 rotateY</h2><p><em>perspective 透视·景深</em></p>
+<p>这条属性加在父级身上,数值越小越近越明显</p>
+<p>单位像素</p>
+<p>正值,右手定则逆时针,负值,顺时针</p>
+<p><strong>元素背过去是否可见</strong></p>
+<pre><code>backface-visibility : visible / hidden
+</code></pre><p>cubic-bezier 贝塞尔曲线</p>
+<p><a href="http://xuanfengge.com" title="贝赛尔曲线网址" target="_blank" rel="external">http://xuanfengge.com</a></p>
+<h2 id="translateZ"><a href="#translateZ" class="headerlink" title="translateZ"></a>translateZ</h2><p>沿着Z方向位移,Z轴正方向朝屏幕外侧</p>
+<p>translate 和 rotate结合时,不同的顺序有不同的效果</p>
+<h2 id="perspective-origin-灭点-透视点-消失点"><a href="#perspective-origin-灭点-透视点-消失点" class="headerlink" title="perspective-origin 灭点 透视点 消失点"></a>perspective-origin 灭点 透视点 消失点</h2><p>旋转后原本平行线的交点</p>
+<h2 id="transform-style"><a href="#transform-style" class="headerlink" title="transform-style"></a>transform-style</h2><p>规定子元素如何在空间中显示</p>
+<p>默认值 flat<br>3D显示 preserve-3d</p>
+<p>这条属性加在父元素身上</p>
+<p>当元素发生3D旋转时,整个坐标系都发生了旋转</p>
+<h2 id="CSS3动画-animate"><a href="#CSS3动画-animate" class="headerlink" title="CSS3动画 animate"></a>CSS3动画 animate</h2><pre><code>animate( 动画名字 事件 速度函数 播放延时 循环次数( inifite 无限次 ) 执行顺序 执行状态( running / paused ) 动画运动之外的状态( forwards 将动画停留在最后一帧 ) )
+</code></pre><p>不需要人为干预可以自行触发</p>
+<h3 id="定义动画关键字-keyframes"><a href="#定义动画关键字-keyframes" class="headerlink" title="定义动画关键字 @keyframes"></a>定义动画关键字 @keyframes</h3><pre><code>@keyframes 动画名称 {
+    /*关键帧描述语句*/
+}
+</code></pre><p>描述关键帧语句可以用 frome…( A状态 )to…( B状态 )</p>
+<p>也可以用百分比 ( 0% … ; … 50%… ; … 100%… ; )</p>
+<h3 id="多组动画的移动"><a href="#多组动画的移动" class="headerlink" title="多组动画的移动"></a>多组动画的移动</h3><p>每个状态的状态描述不能简写,每个状态描述都写上</p>
+<h3 id="帧动画"><a href="#帧动画" class="headerlink" title="帧动画"></a>帧动画</h3><p>动画速度函数写成 step( 步数 ) 就成为了帧动画</p>
 
           
         
@@ -785,7 +939,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 - 副本 (5)/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/HTML5-day03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -804,7 +958,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 - 副本 (5)/" itemprop="url">Hello World2</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day03/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -816,7 +970,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -856,15 +1010,66 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="HTML5-day03"><a href="#HTML5-day03" class="headerlink" title="HTML5-day03"></a>HTML5-day03</h1><h2 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h2><pre><code>background-image: linear-gradient(to bottom, color);
+</code></pre><p>linear-gradient 控制的是线性渐变</p>
+<p>参数:</p>
+<ol>
+<li>参数1. 渐变线的角度: 可以用 <em>to 方位名词</em> / <em>角度deg(默认180deg,从上到下)</em>  ,方向是按照顺时针递增</li>
+<li>参数2. 颜色,可以逗号分隔多个颜色值</li>
+<li><p>每个颜色后面可以加百分比,颜色会延伸至此(<em>止色位置</em>)</p>
+<h2 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h2><p> background: radial-gradient();</p>
+</li>
+<li><p>参数1 圆的大小,一个值是正圆,两个值是椭圆</p>
+</li>
+<li>参数2 圆心位置, <em>at x坐标 y坐标</em> / <em>at 方位名词</em> / <em>at 百分比</em></li>
+<li>参数3 颜色,可以像线性渐变一样加百分比<h2 id="浏览器前缀"><a href="#浏览器前缀" class="headerlink" title="浏览器前缀"></a>浏览器前缀</h2></li>
+<li>目的:兼容低版本高级浏览器</li>
+<li>-webkit- 苹果, 谷歌</li>
+<li>-moz- 火狐</li>
+<li>-o- opera</li>
+<li>-ms- IE<h2 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h2>元素在2D平面上的移动,旋转,缩放,斜切,称为<strong>2D转换</strong></li>
+</ol>
+<p>键名:<strong>transform :</strong></p>
+<p>键值: </p>
+<ol>
+<li><em>translate( )</em> 位移,一个参数控制水平移动,两个参数控制水平和垂直,单位可以是 px, 或者百分比(参照的是元素自身宽高)</li>
+<li><em>translateX(), translateY()</em> 单独移动一个方向,一个参数</li>
+<li>translate中的参数指的是位置,而不是移动距离</li>
+</ol>
+<p>扩展</p>
+<ol>
+<li>绝对定位( top : 50% ; left : 50% )配合 translate( -50%, -50% ) 可以帮助元素居中,不写明宽度时,元素宽度最多只有父元素宽度的一半(因为left 50%,而高度有滚动条存在)</li>
+<li>translate 类似于相对定位</li>
+</ol>
+<h2 id="旋转-rotate"><a href="#旋转-rotate" class="headerlink" title="旋转 rotate"></a>旋转 rotate</h2><pre><code>translate: rotate( 45deg );
+transform-origin: center center;
+transform-origin: 100px 100px;
+transform-origin: 50% 50%;
+</code></pre><h2 id="缩放-scale"><a href="#缩放-scale" class="headerlink" title="缩放 scale"></a>缩放 scale</h2><pre><code>transform: scale(1,1);
+transfrom: scaleX(1),scaleY(1);
+</code></pre><ol>
+<li>参数是倍数,没有单位的数值,可以是小数,可以是一个参数,可以是两个参数分别控制</li>
+</ol>
+<h2 id="斜切-skew"><a href="#斜切-skew" class="headerlink" title="斜切 skew"></a>斜切 skew</h2><pre><code>transfrom: skew(10deg);
+transform: skewX(10deg);
+transform: skewY(10deg);
+transform: skew(10deg,10deg);
+</code></pre><p>X方向斜切,中心点控制上下;</p>
+<p>Y方向斜切,中心点控制左右.</p>
+<h2 id="多个2D效果共存"><a href="#多个2D效果共存" class="headerlink" title="多个2D效果共存"></a>多个2D效果共存</h2><ol>
+<li>多个效果共存需要写在一行上</li>
+<li>在不同场景出现transfrom时,需要复制写上之前已经存在在的属性,防止覆盖和冲突</li>
+<li>transfrom转换顺序尽量保持统一,如果不统一可能出现问题<h2 id="过渡-transition"><a href="#过渡-transition" class="headerlink" title="过渡 transition"></a>过渡 transition</h2> transition: width 2s, height 2s;<br> transition: all 2s;</li>
+<li>参数说明<ol>
+<li>发生过渡的属性 (写成all 相对来说浪费性能)</li>
+<li>过渡的时间 单位是 ms 和 s</li>
+<li>过渡曲线 </li>
+<li>过渡延时 delay</li>
+</ol>
+</li>
+<li>目前display 和 渐变不能直接产生过度</li>
+<li>过渡的属性最好写全</li>
+</ol>
 
           
         
@@ -913,7 +1118,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (8) - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/HTML5-day02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -932,7 +1137,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (8) - 副本/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/17/HTML5-day02/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -944,7 +1149,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -984,15 +1189,117 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="HTML5第二天·CSS3"><a href="#HTML5第二天·CSS3" class="headerlink" title="HTML5第二天·CSS3"></a>HTML5第二天·CSS3</h1><ul>
+<li>CSS3兼容性差,需要添加浏览器私有前缀</li>
+<li>移动端用的多,浏览器版本高</li>
+<li>在不断改进中</li>
+<li>应用相对广泛</li>
+</ul>
+<h2 id="如何对待CSS3"><a href="#如何对待CSS3" class="headerlink" title="如何对待CSS3"></a>如何对待CSS3</h2><ul>
+<li>坚持<strong>渐进增强</strong>原则(another.优雅降级)</li>
+</ul>
+<p>##选择器##</p>
+<ol>
+<li>基本选择器(C2)</li>
+<li>关系选择器(C2)</li>
+<li>属性选择器[用在表单元素中居多],[有兼容性问题]</li>
+<li>伪类选择器<ol>
+<li><strong>:nth-child( num )</strong> ( 起始为 1 ,参数为”odd”时选择奇数,参数为”even”时选择偶数,也可以用”2n”,”2n+1”,”3n”这一类表达式 )</li>
+<li><strong>:first-child()</strong> [ C2 ]</li>
+<li><strong>:last-child()</strong> [ C3 ]</li>
+<li><strong>:nth-of-type()</strong> [ first-of-type , last-of-type ] (参数可以是数字, odd, even, n的表达式 ) ( nth-of-type比nth-child选择条件上宽松 )</li>
+<li>表单相关元素<ol>
+<li><strong>input:focus</strong></li>
+<li><strong>input:checked</strong></li>
+<li><strong>input:enabled</strong></li>
+<li><strong>input:disabled</strong></li>
+<li><strong>E:target</strong> [ 锚点跳转时选中 ]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>伪元素选择器<ol>
+<li>渲染一个虚拟的标签</li>
+<li>DOM树上不存在,不能通过JS获取,可以利用切换类名去更改样式</li>
+<li>单标签没有伪元素</li>
+<li>伪元素默认是行内元素</li>
+<li>使用伪元素清除浮动是因为伪元素不占用DOM内存</li>
+<li>::双冒号是为了与伪类区分,但是为了兼容IE6,7,8,使用 : 单冒号, 手机端可以使用 :: </li>
+<li>伪元素需要hover, 使用<em>父元素:hover:after( before )</em>格式<h2 id="icon-font"><a href="#icon-font" class="headerlink" title="icon-font"></a>icon-font</h2>font-class方式引用时直接到icon-font css 配置文件里提取伪类样式内的代码</li>
+</ol>
+</li>
+</ol>
+<p>2017/7/17 11:59:59 </p>
+<h2 id="Web字体"><a href="#Web字体" class="headerlink" title="Web字体"></a>Web字体</h2><ol>
+<li>兼容性:支持所有浏览器</li>
+<li>不失真,矢量</li>
+<li>改颜色方便</li>
+<li>阿里 : <a href="http://www.iconfont.com" title="阿里字体库" target="_blank" rel="external">http://www.iconfont.com</a></li>
+<li>有字库:  <a href="http://www.youziku.com" title="有字库" target="_blank" rel="external">http://www.youziku.com</a></li>
+<li>插入在线的文件引用和提供的类</li>
+<li>不适合大面积使用,涉及性能和可读性问题</li>
+</ol>
+<h2 id="边框圆角-border-radius"><a href="#边框圆角-border-radius" class="headerlink" title="边框圆角 border-radius"></a>边框圆角 border-radius</h2><ol>
+<li>只有一个值的情况下,四个角的圆的水平和垂直半径都是同一个值</li>
+<li>两个值是(左上和右下),(右上和左下)</li>
+<li>三个值的情况下(左上),(右上和左下),(右下)</li>
+<li>四个值的情况下,左上,右上,右下,左上</li>
+<li>单独控制X和Y方向半径  border-radius : X方向半径 / Y方向半径 </li>
+<li>分别控制四个方向上的水平半径和垂直半径<br> border-radius: 10px 20px 30px 40px /40px 30px 20px 10px </li>
+<li>单位可以是像素,百分比<h2 id="阴影-box-shadow"><a href="#阴影-box-shadow" class="headerlink" title="阴影 box-shadow"></a>阴影 box-shadow</h2></li>
+<li>W3C坐标系原点在左上角,水平正方向朝右,垂直正方向朝下</li>
+<li>前两个参数控制阴影的水平,垂直的偏移,第三个值控制阴影羽化半径(默认值为0),第四个参数控制阴影的大小(默认值为0),第五个参数为颜色,第六个参数控制内外阴影( inset / outset )</li>
+<li>颜色单位一般使用rgba</li>
+<li>outset 是默认值,不能写,写了阴影不显示</li>
+<li>可以写多个阴影<h2 id="文字阴影-text-shadow"><a href="#文字阴影-text-shadow" class="headerlink" title="文字阴影 text-shadow"></a>文字阴影 text-shadow</h2>同于box-shadow<h2 id="边框图片-border-image"><a href="#边框图片-border-image" class="headerlink" title="边框图片 border-image"></a>边框图片 border-image</h2>border-image : url(“”);</li>
+</ol>
+<p>border-image-slice 图片切割宽度,无单位</p>
+<p>border-image-repeat : (stretch(拉伸) , repeat(重复), round(均分)) ;</p>
+<p>简写方式:</p>
+<pre><code>border-image: url() 26(slice) stretch;
+</code></pre><h2 id="背景系列"><a href="#背景系列" class="headerlink" title="背景系列"></a>背景系列</h2><ol>
+<li><p>背景是否随着页面滚动而滚动 <strong>background-attachment</strong></p>
+<pre><code>backgorund-attachment : scroll / fixed;
+</code></pre></li>
+<li><p>背景平铺的原点 background-origin</p>
+<pre><code>background-origin: padding-box(默认值) / content-box / border-box
+</code></pre><ol>
+<li>padding-box : padding的0,0点开始平铺</li>
+<li>content-box : content的0,0点开始平铺</li>
+<li>border-box : border的0,0点开始平铺</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li><p>多重背景<br>在background后写多次”url() x y no-repeat / repeat”即可引入多张背景图片</p>
+</li>
+<li><p>控制背景图片大小 <strong>background-size</strong></p>
+<ol>
+<li>一个参数时,会设置给图片宽度,高度会自动缩放</li>
+<li>两个参数时,会分别设置给宽度,高度,图片可能会产生变形</li>
+<li>参数为百分比时,参照的是盒子的宽高,不是图片自身大小</li>
+<li>参数为<strong>contain</strong>时将图片拉伸到有一条边触碰到盒子边缘时就停止放大</li>
+<li>参数为<strong>cover</strong>时,contain的基础上,将短的那一边也拉伸到盒子边缘,并自动裁切超出的部分,不留白<h2 id="盒子内–"><a href="#盒子内–" class="headerlink" title="盒子内–"></a>盒子内–</h2></li>
+</ol>
+</li>
+<li><strong>box-sizing:</strong> <ol>
+<li><strong>border-box</strong> 內减 border 和 padding, 盒子实际宽度等于 width 值<ol>
+<li>内部元素继承的是內减过的width</li>
+</ol>
+</li>
+<li><strong>content-box</strong> 默认值</li>
+</ol>
+</li>
+<li><p>內减在移动端的使用</p>
+<h2 id="jQuery的hover事件"><a href="#jQuery的hover事件" class="headerlink" title="jQuery的hover事件"></a>jQuery的hover事件</h2><p><strong>hover()事件</strong>有两个参数,都是函数</p>
+<p> $ele.hover( function(){…},function(){…} );</p>
+</li>
+</ol>
+<p>封装了mosueenter和mouseleave,</p>
+<p> mouseenter时执行第一个函数,mouseleave时执行第二个函数</p>
+<h2 id="jQuery的-play-load-trigger-方法"><a href="#jQuery的-play-load-trigger-方法" class="headerlink" title="jQuery的.play(), .load(), .trigger()方法"></a>jQuery的.play(), .load(), .trigger()方法</h2><p><strong>.play( )</strong> 方法播放</p>
+<p><strong>.load( )</strong> 文件加载</p>
+<p><strong>.trigger( )</strong> 让电脑来触发事件, 参数是事件类型,只能是原生事件<br>2017/7/17 18:51:38 </p>
 
           
         
@@ -1041,7 +1348,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (7) - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/AJAX-day02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -1060,7 +1367,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (7) - 副本/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/17/AJAX-day02/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -1072,7 +1379,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
                 2017-09-17
               </time>
             
@@ -1112,15 +1419,200 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="AJAX-day02"><a href="#AJAX-day02" class="headerlink" title="AJAX-day02"></a>AJAX-day02</h1><h2 id="表单提交服务器"><a href="#表单提交服务器" class="headerlink" title="表单提交服务器"></a>表单提交服务器</h2><p>form提交数据需要action,method属性,</p>
+<p>method提交方法:get(默认),post</p>
+<p>input必须要有name属性</p>
+<p>get提交方式是将参数缀在url地址上传递给后台</p>
+<p>?后面都是参数,格式是键(input表单name属性)=值形式,参数之间以&amp;隔开</p>
+<p>在php中,后台以什么方式接受,前台就以什么方式提交</p>
+<p><em>get请求发出方式:</em></p>
+<ol>
+<li>借助form表单</li>
+<li>直接在url地址输入</li>
+<li>通过a链接</li>
+</ol>
+<p>$_GET[]</p>
+<p><em>get优缺点:</em></p>
+<p>优点:效率快</p>
+<p>缺点:不安全,通过get只能发送2kb数据</p>
+<p>实际使用中一般用于查询数据</p>
+<p><em>post提交</em></p>
+<p>机制是将数据写入HTTP协议传递,而不是在url地址上,相对安全</p>
+<p>post一般用于提交数据</p>
+<p>post容量比get要大得多,理论是无限的,但具体要看服务器</p>
+<p>post目前只能借助于表单发出</p>
+<p>$_POST[]</p>
+<p>图片上传必须是post,而且必须有enctype(enctype=”multipart/form-data”)</p>
+<p>图片文件专门用$_FILES[]接收 </p>
+<p>提交图片会产生临时文件,服务器执行结束,临时文件自动销毁</p>
+<p>为什么要有临时文件</p>
+<ol>
+<li>为了防止命名冲突</li>
+<li>如果这个文件没有处理,直接删除</li>
+</ol>
+<p><em>处理文件:</em></p>
+<p>移动文件</p>
+<pre><code>move_uploaded_file(filename,destination)
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/AJAX-day01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anblandy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anblandy | 个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/17/AJAX-day01/" itemprop="url">ajax-01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
+                2017-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="http服务"><a href="#http服务" class="headerlink" title="http服务"></a>http服务</h2><ol>
+<li>服务器的概念</li>
+<li>服务器的类型</li>
+<li>服务器软件</li>
+<li>BS架构和CS架构(broswer sever, client sever)</li>
+<li><p>建立http服务器</p>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><p> &lt;?php</p>
+<pre><code>//php运行环境&lt;?php?&gt;
+echo &apos;hello world&apos;;
+</code></pre><p> ?&gt;</p>
+</li>
+</ol>
+<p><strong>变量的声明</strong></p>
+<p>变量名前加$</p>
+<p>$num = “hello world”;<br>echo $num;</p>
+<p><strong>变量类型</strong></p>
+<pre><code>var_dump($num).//输出变量类型
+int
+float
+str //字符串,建议双引号
+array //数组,(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;)
+</code></pre><p>php数组有两种</p>
+<ol>
+<li><p>索引数组</p>
+<pre><code>for
+</code></pre></li>
+</ol>
+<p>可以直接通过索引值去获取对应的值</p>
+<ol>
+<li><p>关联数组</p>
+<pre><code>foreach($arr as $key =&gt; $value)
+</code></pre><p>类似JS对象,通过键值[“index”]访问</p>
+</li>
+</ol>
+<p><strong>条件语法,分支语句</strong></p>
+<pre><code>if else
+count($arr) 计算数组长度的方法
+</code></pre><p><strong>对象</strong></p>
+<p>php里不能直接得到对象,需要通过构造函数</p>
+<p><strong>连字符 .</strong></p>
+<p>利用双引号加大括号可以不用连接字符串去读取变量</p>
 
           
         
@@ -1169,7 +1661,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (4) - 副本 - 副本/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -1188,7 +1680,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (4) - 副本 - 副本/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/17/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -1200,263 +1692,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
-                2017-09-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (6) - 副本/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Anblandy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (6) - 副本/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
-                2017-09-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/hello-world - 副本 (3) - 副本 - 副本/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Anblandy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Anblandy | 个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/17/hello-world - 副本 (3) - 副本 - 副本/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T22:20:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T20:19:44+08:00">
                 2017-09-17
               </time>
             
@@ -1543,10 +1779,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1590,7 +1822,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
