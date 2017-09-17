@@ -475,7 +475,7 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 18px;
   color: #ccc;
   background: #2d2d2d;
   line-height: 1.6;
@@ -490,7 +490,7 @@ code {
   color: #555;
   background: #eee;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 18px;
 }
 pre code {
   padding: 0;
@@ -1115,7 +1115,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1815,7 +1815,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6cffa6;
+  background: #ff7c67;
 }
 .links-of-blogroll {
   font-size: 13px;
