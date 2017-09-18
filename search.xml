@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[angular的一些知识点总结]]></title>
-    <url>%2F2017%2F09%2F18%2Fangular%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Angular</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>Angular</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[page]]></title>
-    <url>%2F2017%2F09%2F18%2Fpage%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[LESS总结]]></title>
     <url>%2F2017%2F09%2F17%2FLess%E9%A2%84%E5%A4%84%E7%90%86%2F</url>
     <content type="text"><![CDATA[Less是css预处理语言 变量 嵌套 封装 传参 less文件新建时需要.less后缀名 注释: //…(不会被编译),或者/ … /(生成的css带这个注释) 变量: 必须以@开头 使用变量时也需要带上@ 例如: @color: red; 嵌套: 嵌套可以在大括号里接着写子元素,一层层嵌套 伪元素嵌套时前面带&amp; 封装 混入语法mixin 可以传递参数(变量格式),设置默认值 ex: .fl(){ float: left; } //200px是默认数值 .left(@num : 200px){ left:@num; } .box{ .fl(); .left(300px); } 引入 当前文件引入其他less,css文件 @import url(URL路径); 建议将所有文件引入,写在最前面]]></content>
