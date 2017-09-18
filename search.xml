@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[angular的一些知识点总结]]></title>
+    <url>%2F2017%2F09%2F18%2Fangular%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Angular</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Angular</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[page]]></title>
+    <url>%2F2017%2F09%2F18%2Fpage%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[LESS总结]]></title>
     <url>%2F2017%2F09%2F17%2FLess%E9%A2%84%E5%A4%84%E7%90%86%2F</url>
     <content type="text"><![CDATA[Less是css预处理语言 变量 嵌套 封装 传参 less文件新建时需要.less后缀名 注释: //…(不会被编译),或者/ … /(生成的css带这个注释) 变量: 必须以@开头 使用变量时也需要带上@ 例如: @color: red; 嵌套: 嵌套可以在大括号里接着写子元素,一层层嵌套 伪元素嵌套时前面带&amp; 封装 混入语法mixin 可以传递参数(变量格式),设置默认值 ex: .fl(){ float: left; } //200px是默认数值 .left(@num : 200px){ left:@num; } .box{ .fl(); .left(300px); } 引入 当前文件引入其他less,css文件 @import url(URL路径); 建议将所有文件引入,写在最前面]]></content>
@@ -12,40 +29,5 @@
         <tag>css</tag>
         <tag>预处理语言</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FHTML5-day06%2F</url>
-    <content type="text"><![CDATA[HTML5-day06检测网络状态window.navigator.onLine 检测网络状态,返回布尔值 检测得是本地连接,不是真实的网络流量 监听 online offline 事件来监听网络状态 网络状态从无网–&gt;有网时触发online事件 有网–&gt;无网时触发offline事件 ##web存储##传统方式 : document.cookie 本地存储的意义, 将数据存储在用户本地电脑上,减轻服务器压力,提高用户体验 本地存储API存储到本地window.sessionStorage.setItem( ); window.localStorage.setItem( ); 参数是 { key , value } 形式 多次存储,如果key名字一样,后面存储的会覆盖之前设置的值 读取数据window.sessionStorage.getItem( ) window.localStorage.getItem( ); 参数是key 删除数据window.sessionStorage.removeItem( ) window.localStorage.removeItem( ); 参数是key 清除所有数据window.sessionStorage.clear( ) window.localStorage.clear( ); 通过索引获取键的名字window.sessionStorage.key*(0) window.localStorage.key(0); 获取数据长度window.sessionStorage.length; window.localStorage.length; sessionStorage , localStorage 区别localStorage 永久存储于本地电脑磁盘中,关闭浏览器、电脑、断电,数据都在 可存储大小为20Mb 可以多窗口数据共享 ( 但是遵守同源策略 ) sessionStorage 临时存储,当页面关闭的时候,session数据会被自动清空 可存储大小为5Mb 不能多窗口数据共享 ( 通过跳转可以 ) 页面跳转可以通过session实现数据共享 文件读取创建读取文件对象 var file = DOMObj.files[0]; var fr = new FileReader(); fr.readAsDataURL(file);//用文件读取对象解析文件 //当fr将file文件解析完毕时执行 fr.addEventListener(&apos;load&apos;,function(){ //解析完成的结果 var result = fr.result;//fr.result中存储的是解析的结果 }//一般异步都有事件或者回调函数可用,供功能完成时执行 拖拽API元素设置 draggable = “ true “ 即可被拖拽,成为拖拽元素 事件 ondragstart 开始拖拽时的事件 ondragend 结束拖拽时的事件 ondrag 拖拽时持续触发的事件 目标元素上的事件,目标元素是事件源 : ondragenter 拖拽元素进入目标元素触发 ondragleave 拖拽元素离开目标元素触发 ondragover [拖拽悬上]拖拽元素在目标元素内时一直触发 ondrop 在拖拽元素到目标身上松开鼠标时触发,这个事件默认情况下不会触发,浏览器默认阻止此事件(图片文字超链接默认开启),在dragover时阻止默认行为可以开启这个事件[event.preventDefault(); ] 案例:拖拽文件到div中拖拽外部元素进行图片解析,并在目标元素上预览出来 怎么阻止浏览器默认的新页面打开图片 document在drop的时候阻止掉默认事件 document.drop=function(e){ e.preventDefault(); } document.dragover=function(e){ e.preventDefault(); } 怎么获取外部拖进来的文件 target.ondrop=function(e){ //获取图片文件 var files = e.dataTransfer.files[0]; var fr= new FileReader(); fr.readAsDateURL(files); fr.onload = function(){ var result = fr.result; var img = document.creatElement(&quot;img&quot;); img.src = result; target.innerHTML = &quot;&quot;; target.appenChild(img); } } 地理位置APILBS (Location Based Sever) 基于位置服务 navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options) 在成功的回调函数里接受一个position对象,这个对象里获取的是当前用户的是地理位置信息(经度和纬度) 在错误的回调函数里接受一个error对象,这个对象里面存储的是错误的信息 超时设置,单位ms // 例如 : timeout : 5000; 播放器案例实现元素全屏显示 DOMObj.requestFullScreen(); DOMObj.webkitRequestFullScreen(); video的事件 timeupdate事件 Media.duration 媒体时长 .onchang事件 表单的值发生改变的时候触发的事件.oninput事件 表单在输入的时候触发 media.volume 媒体音量]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FHTML5-day05%2F</url>
-    <content type="text"><![CDATA[H5-day05CSS动画库http://animate.css 伸缩布局 flex给容器添加CSS属性 弹性布局的前提 display: flex; 改变主轴方向 项目默认水平排列 flex-direction: row(主轴水平,左--&gt;右) | row-reverse (主轴水平方向翻转右--&gt;左) | column(主轴垂直 上--&gt;下) | column-reverse (主轴垂直反转 下--&gt;上) 控制元素在主轴的对齐方式 justify-content : flex-start(以起点对齐) | flex-end(以终点对齐) | center(居中对齐) | space-between(两端对齐) | space-around(环绕对齐) 对齐永远是整体对齐,不会颠倒项目次序,而flex-dircetion会改变项目次序 /*flex-wrap : 控制项目是否换行*/ flex-wrap : no-wrap(默认,不换行) | wrap(换行) | wrap-reverse(颠倒换行(换行时向上换)) /*flex-flow : flex-diection和flex-wrap的简写*/ align-item 侧轴(交叉轴)单行情况下的对齐方式 align-item : flex-start (起点对齐) | flex-end (终点对齐) | center (居中对齐) | stretch (默认值,没有高度时自动将项目高度和容器高度设置为一致) align-content 定义多行轴线的对齐方式,如果轴线只有一行,那么这个属性不起作用 align-content : flex-start | flex-end | center(居中对齐) | space-between(两端对齐) | space-around(环绕对齐) | stretch(拉伸) 项目属性/* order 项目之间的排序 默认为0 */ /*越小越靠前*/ /* flex-grow 定义项目之间的放大比例,默认为0,即使存在剩余空间也不放大*/ /* flex-shrink 定义项目的缩小比例 原理和flex-grow是一样的, 默认值为 1 ,一个项目值为0时,他不会缩小*/ /* flex-basis 宽度,比默认宽度属性权重高,默认值为auto */ /* flex 是flex-grow,flex-shrink,flex-basis的简写 */ /* align-self 给某个项目单独定义属性*/ 案例“transitionend”过渡结束触发的事件]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FHTML5-day04%2F</url>
-    <content type="text"><![CDATA[HTML-day04tips伪类的CSS中写content:attr(属性名)可以获取父元素的属性值 Y方向旋转 rotateYperspective 透视·景深 这条属性加在父级身上,数值越小越近越明显 单位像素 正值,右手定则逆时针,负值,顺时针 元素背过去是否可见 backface-visibility : visible / hidden cubic-bezier 贝塞尔曲线 http://xuanfengge.com translateZ沿着Z方向位移,Z轴正方向朝屏幕外侧 translate 和 rotate结合时,不同的顺序有不同的效果 perspective-origin 灭点 透视点 消失点旋转后原本平行线的交点 transform-style规定子元素如何在空间中显示 默认值 flat3D显示 preserve-3d 这条属性加在父元素身上 当元素发生3D旋转时,整个坐标系都发生了旋转 CSS3动画 animateanimate( 动画名字 事件 速度函数 播放延时 循环次数( inifite 无限次 ) 执行顺序 执行状态( running / paused ) 动画运动之外的状态( forwards 将动画停留在最后一帧 ) ) 不需要人为干预可以自行触发 定义动画关键字 @keyframes@keyframes 动画名称 { /*关键帧描述语句*/ } 描述关键帧语句可以用 frome…( A状态 )to…( B状态 ) 也可以用百分比 ( 0% … ; … 50%… ; … 100%… ; ) 多组动画的移动每个状态的状态描述不能简写,每个状态描述都写上 帧动画动画速度函数写成 step( 步数 ) 就成为了帧动画]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FHTML5-day03%2F</url>
-    <content type="text"><![CDATA[HTML5-day03线性渐变background-image: linear-gradient(to bottom, color); linear-gradient 控制的是线性渐变 参数: 参数1. 渐变线的角度: 可以用 to 方位名词 / 角度deg(默认180deg,从上到下) ,方向是按照顺时针递增 参数2. 颜色,可以逗号分隔多个颜色值 每个颜色后面可以加百分比,颜色会延伸至此(止色位置) 径向渐变 background: radial-gradient(); 参数1 圆的大小,一个值是正圆,两个值是椭圆 参数2 圆心位置, at x坐标 y坐标 / at 方位名词 / at 百分比 参数3 颜色,可以像线性渐变一样加百分比浏览器前缀 目的:兼容低版本高级浏览器 -webkit- 苹果, 谷歌 -moz- 火狐 -o- opera -ms- IE2D转换元素在2D平面上的移动,旋转,缩放,斜切,称为2D转换 键名:transform : 键值: translate( ) 位移,一个参数控制水平移动,两个参数控制水平和垂直,单位可以是 px, 或者百分比(参照的是元素自身宽高) translateX(), translateY() 单独移动一个方向,一个参数 translate中的参数指的是位置,而不是移动距离 扩展 绝对定位( top : 50% ; left : 50% )配合 translate( -50%, -50% ) 可以帮助元素居中,不写明宽度时,元素宽度最多只有父元素宽度的一半(因为left 50%,而高度有滚动条存在) translate 类似于相对定位 旋转 rotatetranslate: rotate( 45deg ); transform-origin: center center; transform-origin: 100px 100px; transform-origin: 50% 50%; 缩放 scaletransform: scale(1,1); transfrom: scaleX(1),scaleY(1); 参数是倍数,没有单位的数值,可以是小数,可以是一个参数,可以是两个参数分别控制 斜切 skewtransfrom: skew(10deg); transform: skewX(10deg); transform: skewY(10deg); transform: skew(10deg,10deg); X方向斜切,中心点控制上下; Y方向斜切,中心点控制左右. 多个2D效果共存 多个效果共存需要写在一行上 在不同场景出现transfrom时,需要复制写上之前已经存在在的属性,防止覆盖和冲突 transfrom转换顺序尽量保持统一,如果不统一可能出现问题过渡 transition transition: width 2s, height 2s; transition: all 2s; 参数说明 发生过渡的属性 (写成all 相对来说浪费性能) 过渡的时间 单位是 ms 和 s 过渡曲线 过渡延时 delay 目前display 和 渐变不能直接产生过度 过渡的属性最好写全]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FHTML5-day02%2F</url>
-    <content type="text"><![CDATA[HTML5第二天·CSS3 CSS3兼容性差,需要添加浏览器私有前缀 移动端用的多,浏览器版本高 在不断改进中 应用相对广泛 如何对待CSS3 坚持渐进增强原则(another.优雅降级) ##选择器## 基本选择器(C2) 关系选择器(C2) 属性选择器[用在表单元素中居多],[有兼容性问题] 伪类选择器 :nth-child( num ) ( 起始为 1 ,参数为”odd”时选择奇数,参数为”even”时选择偶数,也可以用”2n”,”2n+1”,”3n”这一类表达式 ) :first-child() [ C2 ] :last-child() [ C3 ] :nth-of-type() [ first-of-type , last-of-type ] (参数可以是数字, odd, even, n的表达式 ) ( nth-of-type比nth-child选择条件上宽松 ) 表单相关元素 input:focus input:checked input:enabled input:disabled E:target [ 锚点跳转时选中 ] 伪元素选择器 渲染一个虚拟的标签 DOM树上不存在,不能通过JS获取,可以利用切换类名去更改样式 单标签没有伪元素 伪元素默认是行内元素 使用伪元素清除浮动是因为伪元素不占用DOM内存 ::双冒号是为了与伪类区分,但是为了兼容IE6,7,8,使用 : 单冒号, 手机端可以使用 :: 伪元素需要hover, 使用父元素:hover:after( before )格式icon-fontfont-class方式引用时直接到icon-font css 配置文件里提取伪类样式内的代码 2017/7/17 11:59:59 Web字体 兼容性:支持所有浏览器 不失真,矢量 改颜色方便 阿里 : http://www.iconfont.com 有字库: http://www.youziku.com 插入在线的文件引用和提供的类 不适合大面积使用,涉及性能和可读性问题 边框圆角 border-radius 只有一个值的情况下,四个角的圆的水平和垂直半径都是同一个值 两个值是(左上和右下),(右上和左下) 三个值的情况下(左上),(右上和左下),(右下) 四个值的情况下,左上,右上,右下,左上 单独控制X和Y方向半径 border-radius : X方向半径 / Y方向半径 分别控制四个方向上的水平半径和垂直半径 border-radius: 10px 20px 30px 40px /40px 30px 20px 10px 单位可以是像素,百分比阴影 box-shadow W3C坐标系原点在左上角,水平正方向朝右,垂直正方向朝下 前两个参数控制阴影的水平,垂直的偏移,第三个值控制阴影羽化半径(默认值为0),第四个参数控制阴影的大小(默认值为0),第五个参数为颜色,第六个参数控制内外阴影( inset / outset ) 颜色单位一般使用rgba outset 是默认值,不能写,写了阴影不显示 可以写多个阴影文字阴影 text-shadow同于box-shadow边框图片 border-imageborder-image : url(“”); border-image-slice 图片切割宽度,无单位 border-image-repeat : (stretch(拉伸) , repeat(重复), round(均分)) ; 简写方式: border-image: url() 26(slice) stretch; 背景系列 背景是否随着页面滚动而滚动 background-attachment backgorund-attachment : scroll / fixed; 背景平铺的原点 background-origin background-origin: padding-box(默认值) / content-box / border-box padding-box : padding的0,0点开始平铺 content-box : content的0,0点开始平铺 border-box : border的0,0点开始平铺 多重背景在background后写多次”url() x y no-repeat / repeat”即可引入多张背景图片 控制背景图片大小 background-size 一个参数时,会设置给图片宽度,高度会自动缩放 两个参数时,会分别设置给宽度,高度,图片可能会产生变形 参数为百分比时,参照的是盒子的宽高,不是图片自身大小 参数为contain时将图片拉伸到有一条边触碰到盒子边缘时就停止放大 参数为cover时,contain的基础上,将短的那一边也拉伸到盒子边缘,并自动裁切超出的部分,不留白盒子内– box-sizing: border-box 內减 border 和 padding, 盒子实际宽度等于 width 值 内部元素继承的是內减过的width content-box 默认值 內减在移动端的使用 jQuery的hover事件hover()事件有两个参数,都是函数 $ele.hover( function(){…},function(){…} ); 封装了mosueenter和mouseleave, mouseenter时执行第一个函数,mouseleave时执行第二个函数 jQuery的.play(), .load(), .trigger()方法.play( ) 方法播放 .load( ) 文件加载 .trigger( ) 让电脑来触发事件, 参数是事件类型,只能是原生事件2017/7/17 18:51:38]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2017%2F09%2F17%2FAJAX-day02%2F</url>
-    <content type="text"><![CDATA[AJAX-day02表单提交服务器form提交数据需要action,method属性, method提交方法:get(默认),post input必须要有name属性 get提交方式是将参数缀在url地址上传递给后台 ?后面都是参数,格式是键(input表单name属性)=值形式,参数之间以&amp;隔开 在php中,后台以什么方式接受,前台就以什么方式提交 get请求发出方式: 借助form表单 直接在url地址输入 通过a链接 $_GET[] get优缺点: 优点:效率快 缺点:不安全,通过get只能发送2kb数据 实际使用中一般用于查询数据 post提交 机制是将数据写入HTTP协议传递,而不是在url地址上,相对安全 post一般用于提交数据 post容量比get要大得多,理论是无限的,但具体要看服务器 post目前只能借助于表单发出 $_POST[] 图片上传必须是post,而且必须有enctype(enctype=”multipart/form-data”) 图片文件专门用$_FILES[]接收 提交图片会产生临时文件,服务器执行结束,临时文件自动销毁 为什么要有临时文件 为了防止命名冲突 如果这个文件没有处理,直接删除 处理文件: 移动文件 move_uploaded_file(filename,destination)]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ajax-01]]></title>
-    <url>%2F2017%2F09%2F17%2FAJAX-day01%2F</url>
-    <content type="text"><![CDATA[http服务 服务器的概念 服务器的类型 服务器软件 BS架构和CS架构(broswer sever, client sever) 建立http服务器 PHP &lt;?php //php运行环境&lt;?php?&gt; echo &apos;hello world&apos;; ?&gt; 变量的声明 变量名前加$ $num = “hello world”;echo $num; 变量类型 var_dump($num).//输出变量类型 int float str //字符串,建议双引号 array //数组,(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;) php数组有两种 索引数组 for 可以直接通过索引值去获取对应的值 关联数组 foreach($arr as $key =&gt; $value) 类似JS对象,通过键值[“index”]访问 条件语法,分支语句 if else count($arr) 计算数组长度的方法 对象 php里不能直接得到对象,需要通过构造函数 连字符 . 利用双引号加大括号可以不用连接字符串去读取变量]]></content>
   </entry>
 </search>
