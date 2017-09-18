@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="web,css,预处理语言," />
+  <meta name="keywords" content="npm工具," />
 
 
 
@@ -102,18 +102,18 @@
 
 
 
-<meta name="description" content="这篇文章对于less语法进行了总结">
-<meta name="keywords" content="web,css,预处理语言">
+<meta name="description" content="这个命令行翻译工具叫做: cli-dict ##安装##1$ npm install cli-dict -g 前提是安装好了node和npm… ##使用方法##12$ dict hello world&amp;gt; 你好世界 支持中英文互译,词源来自有道词典. ##配置项##1$ dict -V , --version / -s, --source [name] / -h, --help ##结束##">
+<meta name="keywords" content="npm工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LESS总结">
-<meta property="og:url" content="https://anblandy.github.io/2017/09/17/Less预处理/index.html">
+<meta property="og:title" content="npm命令行中英文翻译工具">
+<meta property="og:url" content="https://anblandy.github.io/2017/08/18/npm命令行中英文翻译工具/index.html">
 <meta property="og:site_name" content="Anblandy">
-<meta property="og:description" content="这篇文章对于less语法进行了总结">
+<meta property="og:description" content="这个命令行翻译工具叫做: cli-dict ##安装##1$ npm install cli-dict -g 前提是安装好了node和npm… ##使用方法##12$ dict hello world&amp;gt; 你好世界 支持中英文互译,词源来自有道词典. ##配置项##1$ dict -V , --version / -s, --source [name] / -h, --help ##结束##">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-17T15:55:26.715Z">
+<meta property="og:updated_time" content="2017-09-18T04:52:33.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LESS总结">
-<meta name="twitter:description" content="这篇文章对于less语法进行了总结">
+<meta name="twitter:title" content="npm命令行中英文翻译工具">
+<meta name="twitter:description" content="这个命令行翻译工具叫做: cli-dict ##安装##1$ npm install cli-dict -g 前提是安装好了node和npm… ##使用方法##12$ dict hello world&amp;gt; 你好世界 支持中英文互译,词源来自有道词典. ##配置项##1$ dict -V , --version / -s, --source [name] / -h, --help ##结束##">
 
 
 
@@ -142,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="https://anblandy.github.io/2017/09/17/Less预处理/"/>
+  <link rel="canonical" href="https://anblandy.github.io/2017/08/18/npm命令行中英文翻译工具/"/>
 
 
 
 
 
-  <title>LESS总结 | Anblandy</title>
+  <title>npm命令行中英文翻译工具 | Anblandy</title>
   
 
 
@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/09/17/Less预处理/">
+    <link itemprop="mainEntityOfPage" href="https://anblandy.github.io/2017/08/18/npm命令行中英文翻译工具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anblandy">
@@ -342,7 +342,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LESS总结</h2>
+          <h2 class="post-title" itemprop="name headline">npm命令行中英文翻译工具</h2>
         
 
         <div class="post-meta">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T23:14:49+08:00">
-                2017-09-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T12:46:10+08:00">
+                2017-08-18
               </time>
             
 
@@ -365,28 +365,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/less教程/" itemprop="url" rel="index">
-                    <span itemprop="name">less教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -399,10 +377,6 @@
 
           
 
-          
-              <div class="post-description">
-                  这篇文章对于less语法进行了总结
-              </div>
           
 
         </div>
@@ -418,43 +392,13 @@
       
 
       
-        <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><p>是css预处理语言</p>
-<ol>
-<li>变量</li>
-<li>嵌套</li>
-<li>封装</li>
-<li>传参</li>
-</ol>
-<ol>
-<li>less文件新建时需要<em>.less</em>后缀名</li>
-</ol>
-<p>注释: //…(不会被编译),或者/<em> … </em>/(生成的css带这个注释)</p>
-<p><strong>变量</strong>:</p>
-<p>必须以@开头</p>
-<p>使用变量时也需要带上@</p>
-<p>例如: @color: red;</p>
-<p><strong>嵌套</strong>: </p>
-<p>嵌套可以在大括号里接着写子元素,一层层嵌套</p>
-<p>伪元素嵌套时前面带<em>&amp;</em></p>
-<p><strong>封装</strong></p>
-<p>混入语法mixin</p>
-<p>可以传递参数(变量格式),设置默认值</p>
-<p>ex:</p>
-<pre><code>.fl(){
-    float: left;
-}
-//200px是默认数值
-.left(@num : 200px){
-    left:@num;
-}
-.box{
-    .fl();
-    .left(300px);
-}
-</code></pre><p><strong>引入</strong></p>
-<p>当前文件引入其他less,css文件</p>
-<pre><code>@import url(URL路径);
-</code></pre><p>建议将所有文件引入,写在最前面</p>
+        <p>这个命令行翻译工具叫做: cli-dict</p>
+<p>##安装##<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install cli-dict -g</div></pre></td></tr></table></figure></p>
+<p>前提是安装好了node和npm…</p>
+<p>##使用方法##<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ dict hello world</div><div class="line">&gt; 你好世界</div></pre></td></tr></table></figure></p>
+<p>支持中英文互译,词源来自有道词典.</p>
+<p>##配置项##<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ dict -V , --version / -s, --<span class="built_in">source</span> [name] / -h, --<span class="built_in">help</span></div></pre></td></tr></table></figure></p>
+<p>##结束##</p>
 
       
     </div>
@@ -472,11 +416,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web/" rel="tag"># web</a>
-          
-            <a href="/tags/css/" rel="tag"># css</a>
-          
-            <a href="/tags/预处理语言/" rel="tag"># 预处理语言</a>
+            <a href="/tags/npm工具/" rel="tag"># npm工具</a>
           
         </div>
       
@@ -489,18 +429,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/18/npm命令行中英文翻译工具/" rel="next" title="npm命令行中英文翻译工具">
-                <i class="fa fa-chevron-left"></i> npm命令行中英文翻译工具
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/18/page/" rel="prev" title="page">
-                page <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/17/Less预处理/" rel="prev" title="LESS总结">
+                LESS总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -553,17 +489,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/header.jpg"
@@ -639,22 +566,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Less"><span class="nav-number">1.</span> <span class="nav-text">Less</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

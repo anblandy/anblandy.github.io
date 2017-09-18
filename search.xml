@@ -30,4 +30,12 @@
         <tag>预处理语言</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[npm命令行中英文翻译工具]]></title>
+    <url>%2F2017%2F08%2F18%2Fnpm%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[这个命令行翻译工具叫做: cli-dict ##安装##1$ npm install cli-dict -g 前提是安装好了node和npm… ##使用方法##12$ dict hello world&gt; 你好世界 支持中英文互译,词源来自有道词典. ##配置项##1$ dict -V , --version / -s, --source [name] / -h, --help ##结束##]]></content>
+      <tags>
+        <tag>npm工具</tag>
+      </tags>
+  </entry>
 </search>
