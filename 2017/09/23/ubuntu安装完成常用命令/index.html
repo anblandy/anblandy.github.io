@@ -102,18 +102,18 @@
 
 
 
-<meta name="description" content="刚刚安装完成ubuntu之后需要运行的一些命令">
+<meta name="description" content="刚刚安装完成ubuntu之后需要运行的一些命令,作为安装ubuntu时的参考">
 <meta name="keywords" content="linux命令,ubuntu命令,ubuntu安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu安装完成常用命令">
 <meta property="og:url" content="https://anblandy.github.io/2017/09/23/ubuntu安装完成常用命令/index.html">
 <meta property="og:site_name" content="Anblandy">
-<meta property="og:description" content="刚刚安装完成ubuntu之后需要运行的一些命令">
+<meta property="og:description" content="刚刚安装完成ubuntu之后需要运行的一些命令,作为安装ubuntu时的参考">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-23T08:13:21.037Z">
+<meta property="og:updated_time" content="2017-09-23T08:23:39.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu安装完成常用命令">
-<meta name="twitter:description" content="刚刚安装完成ubuntu之后需要运行的一些命令">
+<meta name="twitter:description" content="刚刚安装完成ubuntu之后需要运行的一些命令,作为安装ubuntu时的参考">
 
 
 
@@ -410,7 +410,7 @@
 
           
               <div class="post-description">
-                  刚刚安装完成ubuntu之后需要运行的一些命令
+                  刚刚安装完成ubuntu之后需要运行的一些命令,作为安装ubuntu时的参考
               </div>
           
 
@@ -427,8 +427,16 @@
       
 
       
-        <p>彻底删除 libre office<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove --purge libreoffice*</div><div class="line">sudo apt-get remove --purge pidgin*</div><div class="line">sudo passwd root</div></pre></td></tr></table></figure></p>
-
+        <h3 id="彻底删除-libre-office"><a href="#彻底删除-libre-office" class="headerlink" title="彻底删除 libre office"></a>彻底删除 libre office</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove --purge libreoffice*</div><div class="line">sudo apt-get remove --purge pidgin*</div><div class="line">sudo passwd root</div></pre></td></tr></table></figure>
+<h3 id="删除亚马逊的链接"><a href="#删除亚马逊的链接" class="headerlink" title="删除亚马逊的链接"></a>删除亚马逊的链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove unity-webapps-common</div></pre></td></tr></table></figure>
+<h3 id="删除掉自带的没用的软件"><a href="#删除掉自带的没用的软件" class="headerlink" title="删除掉自带的没用的软件"></a>删除掉自带的没用的软件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install onboard deja-dup</div></pre></td></tr></table></figure>
+<h3 id="chrome浏览器的安装"><a href="#chrome浏览器的安装" class="headerlink" title="chrome浏览器的安装"></a>chrome浏览器的安装</h3><p><a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="external">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a> 下载最新的安装文件。</p>
+<pre><code class="bash">sudo apt-get install libappindicator1 libindicator7  
+sudo dpkg -i google-chrome-stable_current_amd64.deb   
+sudo apt-get -f install
+</code></pre>
+<p>这样以后就可以apt安装和更新chrome浏览器了。</p>
+<h3 id="其他可以通过apt安装的常用软件在另一篇文章中介绍"><a href="#其他可以通过apt安装的常用软件在另一篇文章中介绍" class="headerlink" title="其他可以通过apt安装的常用软件在另一篇文章中介绍"></a>其他可以通过apt安装的常用软件在另一篇文章中介绍</h3>
       
     </div>
     
@@ -522,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/header.jpg"
@@ -599,6 +616,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#彻底删除-libre-office"><span class="nav-number">1.</span> <span class="nav-text">彻底删除 libre office</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除亚马逊的链接"><span class="nav-number">2.</span> <span class="nav-text">删除亚马逊的链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除掉自带的没用的软件"><span class="nav-number">3.</span> <span class="nav-text">删除掉自带的没用的软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chrome浏览器的安装"><span class="nav-number">4.</span> <span class="nav-text">chrome浏览器的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他可以通过apt安装的常用软件在另一篇文章中介绍"><span class="nav-number">5.</span> <span class="nav-text">其他可以通过apt安装的常用软件在另一篇文章中介绍</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
