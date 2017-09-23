@@ -37,6 +37,33 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ubuntu安装node.js并配置淘宝镜像]]></title>
+    <url>%2F2016%2F02%2F01%2Fubuntu%E5%AE%89%E8%A3%85node-js%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%2F</url>
+    <content type="text"><![CDATA[使用淘宝镜像淘宝镜像官网是https://npm.taobao.org/ node 和 npm 的安装node可以在官网下载 下载并解压 node-v6.4.4-linux-x64.tar.xz1tar -xJf node-v6.4.4-linux-x64.tar.xz 移到通用的软件安装目录 /opt/1sudo mv node-v6.4.4-linux-x64 /opt/ 安装 npm 和 node 命令到系统命令12sudo ln -s /opt/node-v4.4.4-linux-x64/bin/node /usr/local/bin/node sudo ln -s /opt/node-v4.4.4-linux-x64/bin/npm /usr/local/bin/npm 验证:1node -v v6.4.41npm -v 2.15.1 设置 npm 使用淘宝源先备份1cp ~/.bashrc ~/.bashrc.bak 在 ~/.bashrc 中添加 alias cnpm=”npm –registry=https://registry.npm.taobao.org \–cache=$HOME/.npm/.cache/cnpm \–disturl=https://npm.taobao.org/dist \–userconfig=$HOME/.cnpmrc” 使修改立即生效，输入，回车1source ~/.bashrc 使用淘宝镜像安装 npm 包终端输入1cnpm install [name] 附npm命令全局安装1npm install -g 软件包名 全局安装的路径可以通过下面的命令查看1npm config get prefix 全局安装的路径可以通过下面的命令修改1npm config set prefix &quot;目录&quot; 局部安装（将模块下载到当前命令行所在目录）1npm install [软件包名]]]></content>
+      <categories>
+        <category>node.js</category>
+      </categories>
+      <tags>
+        <tag>linux命令</tag>
+        <tag>ubuntu命令</tag>
+        <tag>ubuntu安装</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu安装tar格式安装包]]></title>
+    <url>%2F2016%2F01%2F25%2Fubuntu%E5%AE%89%E8%A3%85tar%E6%A0%BC%E5%BC%8F%E5%AE%89%E8%A3%85%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[解压tar压缩包的命令:1tar -zxvf xxxx.tar.gz 安装的命令1sudo ./xxxx.sh .sh文件是脚本文件]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux命令</tag>
+        <tag>ubuntu命令</tag>
+        <tag>ubuntu安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu常用软件和安装方式]]></title>
     <url>%2F2016%2F01%2F23%2Fubuntu%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[docky底部栏工具 1sudo apt-get install docky franz即时通讯聚合式软件,可以登陆微信官网下载 guake下拉式终端1sudo apt-get install guake htop命令行进程管理器1sudo apt-get install htop OCS-storexfce主题管理官网下载安装 sublime编辑器运行下面每一行代码: 123wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -sudo apt-get install apt-transport-httpsecho "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list 升级库,完成后就可以安装sublime 12sudo apt-get updatesudo apt-get install sublime-text 新立得软件包管理器1sudo apt-get install synaptic vim1sudo apt-get install vim 查看安装的vim版本1vim --version wps office1sudo apt-get install wps-office git1sudo apt-get install git]]></content>
