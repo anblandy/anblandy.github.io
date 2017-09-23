@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[ubuntu安装完成常用命令]]></title>
-    <url>%2F2017%2F09%2F23%2Fubuntu%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[彻底删除 libre office123sudo apt-get remove --purge libreoffice*sudo apt-get remove --purge pidgin*sudo passwd root 删除亚马逊的链接1sudo apt-get remove unity-webapps-common 删除掉自带的没用的软件1sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku landscape-client-ui-install onboard deja-dup chrome浏览器的安装https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 下载最新的安装文件。 sudo apt-get install libappindicator1 libindicator7 sudo dpkg -i google-chrome-stable_current_amd64.deb sudo apt-get -f install 这样以后就可以apt安装和更新chrome浏览器了。 其他可以通过apt安装的常用软件在另一篇文章中介绍]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux命令</tag>
-        <tag>ubuntu命令</tag>
-        <tag>ubuntu安装</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[LESS总结]]></title>
     <url>%2F2017%2F09%2F17%2FLess%E9%A2%84%E5%A4%84%E7%90%86%2F</url>
     <content type="text"><![CDATA[Less是css预处理语言 变量 嵌套 封装 传参 less文件新建时需要.less后缀名 注释: //…(不会被编译),或者/ … /(生成的css带这个注释) 变量: 必须以@开头 使用变量时也需要带上@ 例如: @color: red; 嵌套: 嵌套可以在大括号里接着写子元素,一层层嵌套 伪元素嵌套时前面带&amp; 封装 混入语法mixin 可以传递参数(变量格式),设置默认值 ex: .fl(){ float: left; } //200px是默认数值 .left(@num : 200px){ left:@num; } .box{ .fl(); .left(300px); } 引入 当前文件引入其他less,css文件 @import url(URL路径); 建议将所有文件引入,写在最前面]]></content>
@@ -47,6 +34,19 @@
       <tags>
         <tag>编辑器插件</tag>
         <tag>sublime插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu安装完成常用命令]]></title>
+    <url>%2F2016%2F01%2F23%2Fubuntu%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[彻底删除 libre office123sudo apt-get remove --purge libreoffice*sudo apt-get remove --purge pidgin*sudo passwd root 删除亚马逊的链接1sudo apt-get remove unity-webapps-common 删除掉自带的没用的软件1sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku landscape-client-ui-install onboard deja-dup chrome浏览器的安装https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 下载最新的安装文件。 sudo apt-get install libappindicator1 libindicator7 sudo dpkg -i google-chrome-stable_current_amd64.deb sudo apt-get -f install 这样以后就可以apt安装和更新chrome浏览器了。 其他可以通过apt安装的常用软件在另一篇文章中介绍]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux命令</tag>
+        <tag>ubuntu命令</tag>
+        <tag>ubuntu安装</tag>
       </tags>
   </entry>
 </search>
