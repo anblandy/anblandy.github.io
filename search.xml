@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[LESS总结]]></title>
-    <url>%2F2017%2F09%2F17%2FLess%E9%A2%84%E5%A4%84%E7%90%86%2F</url>
-    <content type="text"><![CDATA[Less是css预处理语言 变量 嵌套 封装 传参 less文件新建时需要.less后缀名 注释: //…(不会被编译),或者/ … /(生成的css带这个注释) 变量: 必须以@开头 使用变量时也需要带上@ 例如: @color: red; 嵌套: 嵌套可以在大括号里接着写子元素,一层层嵌套 伪元素嵌套时前面带&amp; 封装 混入语法mixin 可以传递参数(变量格式),设置默认值 ex: .fl(){ float: left; } //200px是默认数值 .left(@num : 200px){ left:@num; } .box{ .fl(); .left(300px); } 引入 当前文件引入其他less,css文件 @import url(URL路径); 建议将所有文件引入,写在最前面]]></content>
-      <categories>
-        <category>less教程</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>css</tag>
-        <tag>预处理语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[npm命令行中英文翻译工具 cli-dict]]></title>
     <url>%2F2017%2F08%2F18%2Fnpm%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91%E5%B7%A5%E5%85%B7%20cli-dict%2F</url>
     <content type="text"><![CDATA[命令行翻译工具叫做: cli-dict 安装1npm install cli-dict -g 前提是安装好了node和npm… 使用方法12dict hello world&gt; 你好世界 支持中英文互译,词源来自有道词典. Tips : 第一次使用时比较慢 配置项12dict -V , --version / -s, --source [name] / -h, --help# 版本信息 / 词源设置 / 帮助选项 结束原创内容,转载请注明本页地址]]></content>
@@ -22,6 +9,18 @@
       </categories>
       <tags>
         <tag>npm工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[visual-studio-code插件集锦]]></title>
+    <url>%2F2017%2F06%2F23%2Fvisual-studio-code%E6%8F%92%E4%BB%B6%E9%9B%86%E9%94%A6-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%2F</url>
+    <content type="text"><![CDATA[Auto Close Tag Auto Rename Tag Babel ES6/ES7 Beautify Beautify css/sass/scss/less Better Align bluloco-dark Bootstrap 3 Snippets Bracket Pair Colorizer Class autocomplete for HTML Clock in status bar Code Runner Color Picker CSS Peek Easy LESS EditorConfig for VS Code ESLint file-icons filesize Flatland Monokai Theme Hackers Haze Theme hightlight-matching-tag HTML Class Suggestions HTML CSS Support HTML Snippets HTMLHint Image preview IntelliSense for CSS class names IP Address JavaScript (ES6) code snippets JavaScript Atom Grammer JavaScriptr Snippets Pack jQuery Code Snippets jshint Linux Themes for VS Code Live Server markdownlint Material Icon Theme Material Theme Monokai Dark Soda npm npm Intellisense One Dark Pro Path Intellisense PHP Debug PHP Extension Pack PHP IntelliSense Preview on Web Server px to rem Rebecca-mint Theme Sass Sublime Text Keymap theme-dark-monokai Vetur View In Browser vscode-icons vue Vue 2 Snippets 注 : 此处不再详细介绍[各个插件作用,具体作用见vscode内部插件介绍]]></content>
+      <categories>
+        <category>编辑器插件</category>
+      </categories>
+      <tags>
+        <tag>编辑器插件</tag>
+        <tag>visual-studio-code插件</tag>
       </tags>
   </entry>
   <entry>
